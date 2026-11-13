@@ -7,6 +7,7 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>   //提供system()函数，用于暂停窗口等待按键
 
 /*
  * 函数 is_prime(n)：
@@ -83,6 +84,7 @@ int main(void)
     if(scanf("%lld %lld",&a,&b)!=2)   //scanf返回成功读入的个数
     {
         printf("输入无效，请正确输入，谢谢配合。\n");
+        system("pause");   //暂停，让用户看清错误信息
         return 1;   //1表示出错，立刻结束main
     }
 
@@ -117,6 +119,8 @@ int main(void)
             factorize(n);
         }
     }
+
+    system("pause");   //暂停，防止双击运行时窗口一闪而过（只在 Windows 有效）
 
     return 0;   //0表示正常结束main
 }
