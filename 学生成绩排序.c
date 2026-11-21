@@ -21,7 +21,6 @@ int main(void)
         for (j=0;j<n-1-i;j++)   //每轮相邻比较和交换
         {
             if (student[j][1]<student[j+1][1] || (student[j][1]==student[j+1][1]&&student[j][0]>student[j+1][0]))
-            //
             {
                 temporarySN=student[j][0];
                 temporaryGrade=student[j][1];
